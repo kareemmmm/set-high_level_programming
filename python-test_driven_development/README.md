@@ -1,48 +1,48 @@
-# High-Level Programming - Python: Input/Output
+# Python - Test-Driven Development
 
-This project covers file handling, reading, writing, appending, structural data parsing, and serialization/deserialization workflows using standard Python mechanisms and standard JSON processing utilities.
+This project focuses on the implementation of **Test-Driven Development (TDD)** practices in Python. The goal is to write clean, fully validated, and error-proof code while ensuring high testing coverage using both `doctest` and `unittest` modules.
 
-## Requirements
-* Language: Python 3.8.5+
-* Operating System: Ubuntu 20.04 LTS
-* Coding Style: `pycodestyle` compliant (version 2.8.*)
-* Execution: All files must be executable (`chmod +x`)
-* File Headers: First line of all files must be exactly `#!/usr/bin/python3`
+## Technologies
+* **Language:** Python 3.8.5
+* **Style Guide:** Pycodestyle (version 2.8.*)
+* **Testing Modules:** `doctest` and `unittest`
+* **OS Environment:** Ubuntu 20.04 LTS
 
-## Directory Structure
-\`\`\`text
-set-high_level_programming/
-└── python-input_output Tasks/
-    ├── 0-read_file.py
-    ├── 1-write_file.py
-    ├── 2-append_write.py
-    ├── 3-to_json_string.py
-    ├── 4-from_json_string.py
-    ├── 5-save_to_json_file.py
-    ├── 6-load_from_json_file.py
-    ├── 7-add_item.py
-    ├── 8-class_to_json.py
-    ├── 9-student.py
-    ├── 10-student.py
-    ├── 11-student.py
-    ├── 12-pascal_triangle.py
-    ├── 100-append_after.py
-    └── 101-stats.py
-\`\`\`
+## General Requirements
+* Allowed editors: `vi`, `vim`, `emacs`.
+* All your files will be interpreted/compiled on Ubuntu 20.04 LTS using `python3` (version 3.8.5).
+* All your files should end with a new line.
+* The first line of all your files should be exactly `#!/usr/bin/python3`.
+* A `README.md` file, at the root of the folder of the project, is mandatory.
+* Your code should use the `pycodestyle` style (version 2.8.*).
+* All your files must be executable.
+* All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`).
+* All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`).
+* All your functions (inside and outside a class) should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'`).
+* All your test files should be inside a folder named `tests`.
+* All your test files should be text files (extension: `.txt`) for `doctest`.
+* All your tests should be executed by running: `python3 -m doctest ./tests/*`.
 
-## Tasks & File Manifest
-* **0-read_file.py**: Reads a text file (UTF8) and prints it to stdout.
-* **1-write_file.py**: Writes a string to a text file (UTF8) and returns the number of characters written.
-* **2-append_write.py**: Appends a string at the end of a text file (UTF8) and returns the number of characters added.
-* **3-to_json_string.py**: Returns the JSON representation of an object (string).
-* **4-from_json_string.py**: Returns an object (Python data structure) represented by a JSON string.
-* **5-save_to_json_file.py**: Writes an Object to a text file, using a JSON representation.
-* **6-load_from_json_file.py**: Creates an Object from a "JSON file".
-* **7-add_item.py**: Adds all arguments to a Python list, and then saves them to a file.
-* **8-class_to_json.py**: Returns the dictionary description with simple data structure for JSON serialization of an object.
-* **9-student.py**: Defines a class Student with public instance attributes.
-* **10-student.py**: Extends student serialization with structural attribute filters.
-* **11-student.py**: Extends student mapping to disk with reload capabilities.
-* **12-pascal_triangle.py**: Technical interview prep function computing Pascal's Triangle metrics.
-* **100-append_after.py**: Appends text into a file precisely trailing matched string segments.
-* **101-stats.py**: Monitors incoming standard input line strings to parse active web transaction states.
+---
+
+## Tasks Summary
+
+| Task | File(s) | Description | Test File |
+| --- | --- | --- | --- |
+| **0. Integers Addition** | `0-add_integer.py` | Function that adds 2 integers or floats casted to integers. | `tests/0-add_integer.txt` |
+| **1. Divide a Matrix** | `2-matrix_divided.py` | Function that divides all elements of a matrix by a given divisor. | `tests/2-matrix_divided.txt` |
+| **2. Say my Name** | `3-say_my_name.py` | Function that prints `My name is <first name> <last name>`. | `tests/3-say_my_name.txt` |
+| **3. Print Square** | `4-print_square.py` | Function that prints a square with the `#` character based on size. | `tests/4-print_square.txt` |
+| **4. Text Indentation** | `5-text_indentation.py` | Prints a text with 2 new lines after each of these characters: `.`, `?` and `:`. | `tests/5-text_indentation.txt` |
+| **5. Max Integer - Unittest** | `tests/6-max_integer_test.py` | Unittests for an existing `max_integer(list=[])` function. | *Self-contained unittest* |
+| **6. Matrix Multiplication** | `100-matrix_mul.py` | Function that multiplies 2 matrices after thorough custom validations. | `tests/100-matrix_mul.txt` |
+| **7. Lazy Matrix Multiplication**| `101-lazy_matrix_mul.py` | Multiplies 2 matrices by using the `NumPy` module interface. | `tests/101-lazy_matrix_mul.txt` |
+
+---
+
+## Testing Examples
+
+### Running Doctests
+To run tests for a specific task using the `doctest` module interactive mode:
+```bash
+python3 -m doctest -v ./tests/0-add_integer.txt

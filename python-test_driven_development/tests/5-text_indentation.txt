@@ -1,0 +1,15 @@
+The ``5-text_indentation`` module
+================================
+
+Using ``text_indentation``:
+--------------------------
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Hello. World? Testing: components")
+    Hello.
+    <BLANKLINE>
+    World?
+    <BLANKLINE>
+    Testing:
+    <BLANKLINE>
+    components
