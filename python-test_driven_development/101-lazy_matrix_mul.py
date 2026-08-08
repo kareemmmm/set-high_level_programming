@@ -1,13 +1,16 @@
 #!/usr/bin/python3
-"""Module for matrix multiplication using NumPy."""
+"""Module that multiplies two matrices using NumPy"""
 import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
-    """Multiplies two matrices using NumPy.
+    """Multiplies two matrices using numpy.dot.
 
     Args:
-        m_a: First matrix.
-        m_b: Second matrix.
+        m_a: first matrix.
+        m_b: second matrix.
+
+    Returns:
+        numpy.ndarray: the product matrix.
     """
-    return np.matmul(m_a, m_b).tolist()
+    return np.dot(m_a, m_b)
