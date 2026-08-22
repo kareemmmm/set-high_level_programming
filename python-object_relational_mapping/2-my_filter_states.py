@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Displays all values in states table where name matches argument"""
+"""Displays all values in states table matching state name argument."""
 import sys
 import MySQLdb
 
@@ -12,7 +12,7 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(sys.argv[4])
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(sys.argv[4])
     cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:

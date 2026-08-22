@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Displays all values in states table safely against SQL injection"""
+"""Safe from MySQL injections query for state matching."""
 import sys
 import MySQLdb
 
